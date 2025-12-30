@@ -2,6 +2,7 @@ from fastapi import FastAPI, WebSocket
 import cv2
 import numpy as np
 import base64
+
 from vision_engine import analyze_frame
 
 app = FastAPI()
@@ -17,4 +18,3 @@ async def student_ws(ws: WebSocket):
 
         result = analyze_frame(frame)
         await ws.send_json(result)
-
