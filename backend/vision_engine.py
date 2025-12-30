@@ -1,9 +1,9 @@
 import cv2
-import mediapipe as mp
 import time
+import mediapipe as mp
+from mediapipe.python.solutions import face_mesh
 
-mp_face = mp.solutions.face_mesh
-face_mesh = mp_face.FaceMesh(
+mp_face = face_mesh (
     static_image_mode=False,
     max_num_faces=2,
     refine_landmarks=True
