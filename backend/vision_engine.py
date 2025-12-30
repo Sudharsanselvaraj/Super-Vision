@@ -1,13 +1,15 @@
 import cv2
-import time
 import mediapipe as mp
-from mediapipe.python.solutions import face_mesh
+import time
 
-mp_face = face_mesh (
+mp_face = mp.solutions.face_mesh
+
+face_mesh = mp_face.FaceMesh(
     static_image_mode=False,
     max_num_faces=2,
     refine_landmarks=True
 )
+
 
 LEFT_EYE = [33, 133]
 EYE_TOP = 159
