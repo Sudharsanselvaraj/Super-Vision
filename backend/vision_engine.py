@@ -10,7 +10,6 @@ face_mesh = mp_face.FaceMesh(
     refine_landmarks=True
 )
 
-
 LEFT_EYE = [33, 133]
 EYE_TOP = 159
 EYE_BOTTOM = 145
@@ -82,4 +81,3 @@ def analyze_frame(frame):
         look_start_time = None
 
     return response
-
