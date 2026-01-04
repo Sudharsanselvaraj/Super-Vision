@@ -67,17 +67,6 @@ def get_gaze(landmarks):
         return "DOWN"
     return "CENTER"
 
-def look_away_alert(gaze):
-    global look_start_time
-    if gaze != "CENTER":
-        if look_start_time is None:
-            look_start_time = time.time()
-        elif time.time() - look_start_time >= ALERT_TIME:
-            return True
-    else:
-        look_start_time = None
-    return False
-
 def eyebrow_furrow(lm):
     return abs(((lm.landmark[65].y + lm.landmark[295].y) / 2) - lm.landmark[159].y) < 0.015
 
