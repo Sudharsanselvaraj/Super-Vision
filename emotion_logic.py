@@ -15,3 +15,6 @@ def detect_emotion(landmarks):
     if not mouth_neutral(landmarks):
         return "HAPPY"
     return "FOCUSED"
+
+## return focused and happy
+
